@@ -1,0 +1,6 @@
+.git*
+.vscode
+local.settings.json
+retrieve_so.sh
+test
+.venv
