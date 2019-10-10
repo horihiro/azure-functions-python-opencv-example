@@ -8,7 +8,7 @@ then the libraries are downloaded at `./tmp`
 1. Edit `HttpTrigger/__init__.py` if you want
 1. Deploy to your Function App (Linux and Consumption plan)
 
-The function can comvert image to grayscale image using `cv2.imread`, `cv2.cvtColor` and `cv2.imwrite`
+The http trigger function can comvert image, which is specified by `image_url` query parameter, to grayscale image using `cv2.imread`, `cv2.cvtColor` and `cv2.imwrite`
 
 |Input|Output|
 | - | -|
