@@ -26,13 +26,13 @@
       "label": "retriveLibraries",
       "type": "shell",
       "osx": {
-        "command": "sh ./retrieve_so.sh"
+        "command": "sh ./utils/retrieve_so.sh"
       },
       "windows": {
-        "command": ".\\retrieve_so.bat"
+        "command": ".\\utils\\retrieve_so.bat"
       },
       "linux": {
-        "command": "sh ./retrieve_so.sh"
+        "command": "sh ./utils/retrieve_so.sh"
       }
     }
   ]

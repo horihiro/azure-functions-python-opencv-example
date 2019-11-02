@@ -1,8 +1,7 @@
 .git*
 .vscode
 local.settings.json
-retrieve_so.sh
-retrieve_so.bat
+utils
 test
 .venv
 LD_LIBRARY_PATH.png
