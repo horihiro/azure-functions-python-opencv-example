@@ -5,18 +5,14 @@ import re
 import azure.functions as func
 import mimetypes
 
-# Using `import cv2`, error, which SO files cannot be loaded, is occurred
-# import cv2
-
-# Instead of above, dynamic import cannot be used.
+# In order to use `import cv2`, necessary libraries need to be loaded by following code before the importing.
 import ctypes
-import importlib
-
 exlibpath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/lib/'
+# exlibpath = '/home/site/wwwroot/lib/'
 ctypes.CDLL(exlibpath + 'libglib-2.0.so.0')
 ctypes.CDLL(exlibpath + 'libgthread-2.0.so.0')
 
-cv2 = importlib.import_module('cv2')
+import cv2
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
