@@ -1,12 +1,12 @@
 # azure-functions-python-opencv-example
 This is **unofficial** sample project of Azure Functions for python with OpenCV
 
-1. Install and run docker daemon
-1. Clone this repository
-1. Execute `retrieve_so.sh` or `retrieve_so.bat` in order to copy required SO libraries by using docker-cli<br>
-then the libraries are downloaded at `./tmp`
-1. Edit `HttpTrigger/__init__.py` if you want
-1. Deploy to your Function App (Linux and Consumption plan)
+  1. Install and run docker daemon
+  1. Clone this repository
+  1. Execute `retrieve_so.sh` or `retrieve_so.bat` in order to copy required SO libraries by using docker-cli<br>
+  then the libraries are downloaded at `./lib`
+  1. Edit `HttpTrigger/__init__.py` if you want
+  1. Deploy to your Function App (Linux and Consumption plan)
 
 The http trigger function can comvert image, which is specified by `image_url` query parameter, to grayscale image using `cv2.imread`, `cv2.cvtColor` and `cv2.imwrite`
 
