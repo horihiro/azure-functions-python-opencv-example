@@ -21,6 +21,19 @@
         "command": "${config:azureFunctions.pythonVenv}/bin/python -m pip install -r requirements.txt"
       },
       "problemMatcher": []
+    },
+    {
+      "label": "retriveLibraries",
+      "type": "shell",
+      "osx": {
+        "command": "sh ./retrieve_so.sh"
+      },
+      "windows": {
+        "command": ".\\retrieve_so.bat"
+      },
+      "linux": {
+        "command": "sh ./retrieve_so.sh"
+      }
     }
   ]
 }

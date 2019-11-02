@@ -2,5 +2,8 @@
 .vscode
 local.settings.json
 retrieve_so.sh
+retrieve_so.bat
 test
 .venv
+LD_LIBRARY_PATH.png
+README.md
