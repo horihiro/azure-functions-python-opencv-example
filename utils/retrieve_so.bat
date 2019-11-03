@@ -12,7 +12,7 @@ echo | set /p="Copy libraries from container... "
 docker cp %CID%:/tmp/lib/ . > nul 2>&1
 if errorlevel 1 goto stop
 echo done
-echo | set /p="Shuting down container... "
+echo | set /p="Shutting down container... "
 docker kill %CID% > nul 2>&1
 if errorlevel 1 goto stop
 echo done

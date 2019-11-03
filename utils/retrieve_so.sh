@@ -9,7 +9,7 @@ echo "done"
 echo -n "Copy libraries from container... "
 docker cp ${CID}:/tmp/lib . > /dev/null 2>&1
 echo "done"
-echo -n "Shuting down container... "
+echo -n "Shutting down container... "
 docker kill ${CID} > /dev/null 2>&1
 echo "done"
 echo "Finished."
