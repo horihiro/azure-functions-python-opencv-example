@@ -5,7 +5,26 @@ This is **unofficial** sample project of Azure Functions for python with OpenCV
   1. Clone this repository and open this by VScode with Azure Functions extension.
   1. Edit `HttpTrigger/__init__.py` if you want
   1. Deploy to your Function App (Linux and Consumption plan) using Azure Functions extensions.<br>
-     This step includes the process which downloads the libraies to `./lib`
+     <img src="./DEPLOY_TO_AZURE1.png" width="300px"><br>
+     or<br>
+     <img src="./DEPLOY_TO_AZURE2.png" width="300px"><br>
+     This step includes the process which downloads the libraies to `./lib` 
+  1. Before merging this [PR](https://github.com/Azure/azure-functions-docker/pull/170) and publishing the container image,<br>
+     confirm your code if the libraries are loaded before importing like the following.<br>
+
+     ```py
+     # In order to use `import cv2`, necessary libraries need to be loaded by following code  before the importing.
+     import ctypes
+     exlibpath = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/lib/'
+     # exlibpath = '/home/site/wwwroot/lib/'
+     ctypes.CDLL(exlibpath + 'libglib-2.0.so.0')
+     ctypes.CDLL(exlibpath + 'libgthread-2.0.so.0')
+
+     import cv2
+     ```
+
+     After merging the PR, you will not need above code, just setting the path including the SO libraries (i.e. `/home/site/wwwroot/tmp` ) to App Setting `LD_LIBRARY_PATH`.<br>
+    ![](LD_LIBRARY_PATH.png)
 
 The http trigger function can comvert image, which is specified by `image_url` query parameter, to grayscale image using `cv2.imread`, `cv2.cvtColor` and `cv2.imwrite`
 

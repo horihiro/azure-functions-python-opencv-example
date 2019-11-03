@@ -5,4 +5,6 @@ utils
 test
 .venv
 LD_LIBRARY_PATH.png
+DEPLOY_TO_AZURE1.png
+DEPLOY_TO_AZURE2.png
 README.md
