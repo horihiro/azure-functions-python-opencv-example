@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -eu
 echo -n "Preparing container... "
 CID=$(docker run -d --rm -it mcr.microsoft.com/azure-functions/python /bin/bash)
 docker cp ./utils/ ${CID}:/tmp/ > /dev/null 2>&1
