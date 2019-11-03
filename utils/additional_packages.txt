@@ -1,0 +1,3 @@
+# Additional packages in order to get libraries which are described in necessary_libraries.txt
+libglib2.0-0
+
