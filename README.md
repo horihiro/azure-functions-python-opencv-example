@@ -23,8 +23,8 @@ This is **unofficial** sample project of Azure Functions for python with OpenCV
      import cv2
      ```
 
-     After merging the PR, you will not need above code, just setting the path including the SO libraries (i.e. `/home/site/wwwroot/tmp` ) to App Setting `LD_LIBRARY_PATH`.<br>
-    ![](LD_LIBRARY_PATH.png)
+     After merging the PR, you will not need above code, just setting the path including the SO libraries (i.e. `/home/site/wwwroot/lib` ) to App Setting `LD_LIBRARY_PATH`.<br>
+     ![](./LD_LIBRARY_PATH.png)
 
 The http trigger function can comvert image, which is specified by `image_url` query parameter, to grayscale image using `cv2.imread`, `cv2.cvtColor` and `cv2.imwrite`
 
