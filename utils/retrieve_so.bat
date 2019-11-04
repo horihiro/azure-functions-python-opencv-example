@@ -1,7 +1,7 @@
 @echo off
 echo | set /p="Preparing container... "
 for /f "usebackq" %%A in (`docker run -d --rm -it mcr.microsoft.com/azure-functions/python /bin/bash`) do set CID=%%A
-docker cp ./utils/ %CID%:/tmp/ > nul 2>&1
+docker cp %~dp0 %CID%:/tmp/ > nul 2>&1
 if errorlevel 1 goto stop
 echo done
 echo | set /p="Installing necessary libraries into container... "
