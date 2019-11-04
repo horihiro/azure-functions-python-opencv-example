@@ -45,6 +45,6 @@ The scripts execute following steps.
 
   1. Launch docker container `mcr.microsoft.com/azure-functions/python`.
   1. Copy `necessry_libraries.txt` and `addtional_packages.txt` into the container.
-  1. Install the packages, which is descrived in `necessry_libraries.txt`, into the container.
+  1. Install the packages, which is descrived in `necessry_libraries.txt`, by `apt install` in the container.
   1. Copy the libraries, which is descrived in `addtional_packages.txt` and installed by the previous step, from the container to `./lib` in your local PC.
   1. Shutdown and remove the container.
