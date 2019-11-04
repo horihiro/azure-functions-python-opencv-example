@@ -5,6 +5,9 @@ You need to add the libraries into your deplyment package.
 
 # Examples
 ## 1. opencv-python-headless
+Note: `opencv-python` and `opencv-python-headless` can be loaded already without any solution by [this](https://github.com/Azure/azure-functions-python-worker/issues/497#issuecomment-549234694).<br>
+This is just example.
+
 This pip package needs `libglib-2.0.so.0` and `libgthread-2.0.so.0`.
 
 ### necessry_libraries.txt
