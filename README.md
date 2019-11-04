@@ -8,7 +8,7 @@ This is **unofficial** sample project of Azure Functions for python with OpenCV
      <img src="./DEPLOY_TO_AZURE1.png" width="300px"><br>
      or<br>
      <img src="./DEPLOY_TO_AZURE2.png" width="300px"><br>
-     This step includes the process which downloads the libraies to `./lib` <br>
+     This step includes the process which downloads the libraies to `./lib` (see [this](./utils/)) <br>
      <br>
      **Note:**<br>
      If you want to deploy it with `--build-native` option, please try to execute `functions-core-tools` directly after executing `./utils/retrieve_so.sh` or `.\utils\retrieve_so.bat`.
