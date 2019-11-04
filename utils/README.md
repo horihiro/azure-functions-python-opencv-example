@@ -1,4 +1,4 @@
-# If you see `xxxxxxxx.so.x: cannot open shared object file: No such file or directory
+# If you see `xxxxxxxx.so.x: cannot open shared object file: No such file or directory` on runtime
 You need to add the libraries into your deplyment package.
 
 `retrieve_so.sh` (for linux/mac) or `retrieve_so.bat` (for windows) with appropriate `necessry_libraries.txt`, `addtional_packages.txt` can get the libraries
